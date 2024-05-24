@@ -1,0 +1,113 @@
+/*
+    CSS code that styles the webpage.
+*/
+
+body {
+  font-family: "Times New Roman", Times, serif; /* times new roman font */
+  background-color: lightsteelblue; /* background color of the webpage */
+  display: flex;
+  justify-content: center; /*centers everything */
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* styles the container */
+.container {
+  background-color: #cadcfc; /* container background color */
+  padding: 20px 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 500px;
+}
+
+fieldset {
+  border: none; /* no border */
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* styles the search bar*/
+.search-bar {
+  width: 70%;
+  padding: 12px;
+  margin: 5px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15px;
+  background-color: aliceblue;
+}
+
+/* styles the "Enter A City" placeholder text */
+.search-bar::placeholder {
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15px;
+}
+
+/* styles the search bar */
+.search {
+  width: 25%;
+  padding: 10px;
+  background: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  cursor: pointer;
+  margin: 5px;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* weather icon */
+.weather-info img {
+  width: 120px;
+  height: 120px;
+}
+
+.weather-info h2 {
+  margin: 10px 0;
+  font-size: 25px;
+  text-transform: uppercase; /* capitalizes the city name when displayed */
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 10px;
+}
+
+.weather-info p {
+  margin: 5px 0;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: lighter;
+}
+
+.temperature {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.humidity,
+.pressure,
+.wind-speed {
+  flex-basis: 30%;
+}

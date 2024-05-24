@@ -1,0 +1,61 @@
+<!--
+  HTML code which is essentially the webpage template. The code here organizes how the webpage will look by creating buttons, containers, forms, etc.
+-->
+
+<!DOCTYPE html> <!-- HTML code-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Weather App</title> <!-- Title is Weather App -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <form action="/" method="post">
+          <!-- User can input any city name -->
+          <input
+            name="city"
+            type="text"
+            class="search-bar"
+            placeholder="Enter Any City"
+            required
+          />
+          <input type="submit" class="search" value="Search" /> <!-- search button -->
+        </form>
+        <!-- ejs tags -->
+        <% if (weather !== null) { %> <% if (icon !== null && cityName !== null
+        && weatherData !== null) { %>
+        <div class="weather-info">
+          <h2><%= cityName %></h2> <!-- displays city name -->
+          <img src="<%= icon %>" alt="Weather Icon" /> <!-- displays weather icon -->
+          <div class="temperature">
+            <p>
+              <strong>Temperature :</strong> <%= weatherData.temperature %>°F
+            </p> <!-- displays temperature -->
+            <p><strong>Feels Like :</strong> <%= weatherData.feelsLike %>°F</p> <!-- displays what it actually feels like -->
+          </div>
+          <p>
+            <strong>Description :</strong> <%= weatherData.weatherDescription %><!-- weather description-->
+          </p>
+          <div class="info">
+            <div class="humidity">
+              <p><strong>Humidity :</strong> <%= weatherData.humidity %>%</p> <!-- humidity -->
+            </div>
+            <div class="pressure">
+              <p><strong>Pressure :</strong> <%= weatherData.pressure %> hPa</p> <!-- pressure -->
+            </div>
+            <div class="wind-speed">
+              <p>
+                <strong>Wind Speed :</strong> <%= weatherData.windSpeed %> mph <!--wind speed -->
+              </p>
+            </div>
+          </div>
+        </div>
+        <% } %> <% } %> <% if(error !== null){ %>
+        <p><%= error %></p>
+        <% } %>
+      </fieldset>
+    </div>
+  </body>
+</html>
